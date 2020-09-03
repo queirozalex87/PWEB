@@ -1,0 +1,42 @@
+h1{
+    font-style: italic;
+    font-size: 1.3em;
+}
+a{
+    text-decoration: none;
+}
+p{   
+    text-align: justify;
+    text-indent: 4em;
+    font-size: 1.2em;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+    color: rgba(0,0,0,.7px);
+}
+li{
+    text-indent: 4em;
+    font-size: 1em;
+    text-align: left;
+}
+main{
+    font-size: 1.2em;
+    text-align: center;
+}
+
+header{
+    font-size: 2em;
+    text-align: center;
+    background-color: aqua;
+    border-bottom-style: groove;
+    border-left-color: aquamarine;
+    
+}
+footer{
+    font-size: 1.2em;
+    font-family: monospace;
+    
+}
+.topo{
+    color: aqua;
+    text-align: end;
+}
