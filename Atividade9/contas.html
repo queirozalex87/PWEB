@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas</title>
+</head>
+<body>
+    <script>
+        function PessoaFisica() {
+            var nome;
+            var banco;
+            var nConta;
+            var saldo;
+
+        this.getNome = function () {
+        return nome;
+        };
+        this.getNome = function () {
+                return nome;
+        };
+        this.getBanco = function () {
+                return banco;
+        };
+        this.getNConta = function () {
+                return nConta;
+        };
+        this.getSaldo = function () {
+                return saldo;
+        };
+        this.setNome = function (value) {
+        nome = value;
+        };
+        this.setBanco = function (value) {
+        banco = value;
+        };
+        this.setNConta = function (value) {
+        nConta = value;
+        };
+        this.setSaldo = function (value) {
+        saldo = value;
+        };
+
+}
+function CC() {
+        var saldoEspecial;           
+
+        this.getSaldoEspecial = function () {
+        return saldoEspecial;
+        };
+        this.setSaldoEspecial = function (value) {
+        saldoEspecial = value;
+        };
+
+    }
+
+    function Poupanca() {
+            var juros;
+            var dtVencimento;
+
+        this.getJuros = function () {
+        return juros;
+        };
+        this.setJuros = function (value) {
+        juros = value;
+        };
+        this.getDtVencimento = function () {
+        return dtVencimento;
+        };
+        this.setDtVencimento = function (value) {
+        dtVencimento = value;
+        };
+
+    }
+
+    nPessoaFisica = new PessoaFisica();
+    nPessoaFisica.setNome('Pedro Vieira');
+    nPessoaFisica.setBanco('Banco Itau');
+    nPessoaFisica.setNConta(1653);
+    nPessoaFisica.setSaldo(200);
+    nPessoaFisica.setJuros('2');
+    nPessoaFisica.setDtVencimento('20/01/2025');
+    nPessoaFisica.setSaldoEspecial(2000);
+
+
+alert(nPessoaFisica.getNome() + '\n' + nPessoaFisica.getBanco()+ '\nR$: ' + nPessoaFisica.getSaldo()
++ '\nR$: ' + nPessoaFisica.getSaldoEspecial()+ '\nData de Vencimento' + nPessoaFisica.getDtVencimento());
+    </script>
+    
+</body>
+</html>
