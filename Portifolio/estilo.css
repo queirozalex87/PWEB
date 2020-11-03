@@ -1,0 +1,238 @@
+h1{
+  font-style: italic;
+}
+#fundo{
+  background-color: rgb(0, 0, 0);
+}
+.logo{
+    height:100px;
+    width: 100px;
+}
+/*header*/
+header{
+    height: 100%;
+    max-height: 120px;
+    background: black;
+    padding: 10px;
+    
+/*    grid dentro do header*/
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    grid-area: h;
+    border-bottom-color: red;
+}
+
+.header nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    justify-content: center;
+    align-items: center;
+    
+}
+.header nav a{    
+    display: flex;
+    padding: 10px;
+    color: white;
+    font-size: 1.125em;
+    background: rgba(255, 255, 255, 0.5);
+    
+    border-color: #73ff00;
+    border-bottom-left-radius: 10%;
+    transition: 0.1s;/*sempre no item*/
+    align-items: center;
+    
+}
+.header nav a:hover{ /*quando passa o mouse no botão*/
+    background: rgba(0,0,0,.5);
+    
+
+}
+.header li+li{
+/*    faz alteração somente na segunda li*/
+    margin-left: 30px;
+}
+.header img{
+    width: 60px;
+}
+.topo{
+    padding: 5px;
+    display: flex;
+   
+/*    border-color: red;*/
+/*    border-style: dashed;*/
+}
+@media(max-width:760px){
+    .header{
+        grid-template-columns: auto;
+    }
+    .logo{
+        margin-bottom: 20px;
+        width: auto;
+    }
+    .header nav a{
+        font-size: 1em;
+    }
+    .header li + li{
+        margin-left: 10px;
+    }
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    grid-area: m;
+    padding: 10px;
+    overflow: scroll;
+    
+/*    border-color: red;*/
+/*    border-style: dashed;*/
+}
+aside{
+    height: 100%;
+    width: auto;
+    grid-area: s;
+    background: #000000;
+    padding: 10px;
+
+    
+}
+.aside li a{
+    display: grid;
+    width: 150px;
+    margin: 0 auto 30px 0;
+    background: #fd8802;
+    padding: 10px;
+    border-radius: 10px 0px 5px 0px;
+    box-shadow: 5px 5px 15px 0px rgba(227, 243, 3, 0.15);
+    transition: 0.1s ease-out;
+    justify-items: center;
+    font-size: 1.5em;
+    color: #000000;
+}
+.aside li a:hover{
+    background: #73ff00;
+    width: 5px;
+    color: #ffffff;
+    justify-items: flex-end;
+}
+.aside li img{
+    height: 60px;
+}
+@keyframes seta{
+    from{
+        right: 30px;
+    }
+    to{
+        right: 20px;
+    }
+}
+@media(max-width:760px){
+    .aside{
+        position: relative;
+        overflow-x: auto;/*cria a rolagem no proprio conteiner*/
+        -webkit-overflow-scrolling:touch;/*para apple*/
+        -ms-overflow-style: -ms-autohiding-scrollbar;/*para microsoft*/
+    }
+    .aside::after{
+        content: '☞';
+        position: absolute;
+        top:5px;
+        right: 30px;
+/*        color: rgba(0,0,0,.3);*/
+        animation: seta .5s ease-in 0s infinite alternate;
+    }
+    .aside nav ul{
+        display: flex;
+        
+    }
+    .aside ul li{
+        flex: 1 0 60px;/*não pode diminuir menos que 60*/
+    }
+    .aside{
+        padding: 0 30px;
+    }
+    .aside li a{
+        margin: 30px 30px 30px 0px;
+    }
+}
+
+.anuncio{
+    grid-area: auncio;
+    background: grey;
+    display: grid;
+    align-content: start;
+    padding: 30px;
+    grid-gap: 30px;
+}
+
+footer{
+    grid-area: f;
+    color: white;
+    background: #000000;
+    padding: 30px;
+    text-align: center;
+}
+
+/*estilos do content*/
+p{
+    font-size: 1.2em;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+    color: rgba(0,0,0,.7px);
+}
+
+
+.sobre-box {
+    display: grid;
+/* espaçamento entre as linhas e colunas */
+    grid-gap: 20px;
+    grid-template-columns: auto;
+    grid-template-rows: auto  200px;
+    
+font-size: 1em;
+font-family: Helvetica, Arial, sans-serif;
+text-justify: auto;
+
+/* disposição na tela observe que a aparece 2x na primeira coluna e f aparece 2x na segunda */
+    grid-template-areas: 'a a b b' 'd d c c';
+}
+
+.box {
+    
+    border-radius: 5px;
+}
+
+.a {
+    
+    text-align: center;
+    grid-area: a;
+}
+.b {
+    
+    
+    text-align: justify;
+    grid-area: b;
+}
+.c {
+    
+    
+    text-align: justify;
+    grid-area: c;
+}
+.d {    
+    
+    text-align: center;
+    grid-area: d;
+}
+.perfil:hover{
+	transform: rotateY(180deg);
+}
+.perfil {
+    
+    width: 150px;
+	height: 150px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
