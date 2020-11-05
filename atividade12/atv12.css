@@ -1,0 +1,31 @@
+/*reset basico*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*fim do reset*/
+.body{
+    background-color: #2C88A7;
+    font-size: 1em;
+    padding: 30px;
+}
+label{
+    color: aliceblue;
+    padding: 10px;
+}
+.clearForm, .submitForm{
+    background-color: rgb(255, 115, 0);
+    font-size: 2em;
+    padding: 10px;
+    margin-top: 40px;
+}

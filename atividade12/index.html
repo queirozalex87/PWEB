@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <title>Atividade 12</title>
+  <link rel="stylesheet" href="./atv12.css">
+
+</head>
+
+<body class="body">
+
+  <form id="form">
+    <h3>Formulário Principal</h3>
+    <fieldset>
+      <label for="name">Nome</label>
+      <input type="name" id="name" minlength="10">
+    </fieldset>
+
+    <fieldset>
+      <label for="email">E-mail</label>
+      <input type="email" id="email">
+    </fieldset>
+
+    <fieldset>
+      <label for="commentary">Comentário</label>
+      <textarea name="commentary" id="commentary" cols="30" rows="10" required
+      maxlength="20"></textarea>
+    </fieldset>
+
+    <fieldset>
+      <h4>Pesquisa:</h4>
+      <legend for="search">Primeira vez nessa página?</legend>
+
+      <label for="search">
+        Sim
+        <input type="radio" name="search" id="yes" value="yes">
+      </label>
+
+      <label for="search">
+        Não
+        <input type="radio" name="search" id="no" value="no" checked>
+      </label>
+     <p id="feedback"></p>
+    </fieldset>
+
+    <button class="clearForm">Limpar</button>
+    <button class="submitForm" type="submit">Enviar</button>
+  </form>
+
+  <script src="atv12.js></script>
+</body>
